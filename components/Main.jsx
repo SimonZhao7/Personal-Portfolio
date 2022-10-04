@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router'
+// Framer Motion
 import { motion } from 'framer-motion'
 // TypeWriter
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
@@ -13,6 +15,7 @@ const Main = () => {
         delaySpeed: 2000,
         loop: true,
     })
+    const router = useRouter()
     return (
         <div className='flex h-screen flex-col items-center justify-center space-y-10 pt-[72px]'>
             <motion.div
@@ -54,10 +57,30 @@ const Main = () => {
                 <Cursor />
             </h3>
             <div className='flex space-x-2 xs:space-x-4 lg:space-x-8'>
-                <button className='navBtn'>About</button>
-                <button className='navBtn'>Experience</button>
-                <button className='navBtn'>Projects</button>
-                <button className='navBtn'>Skills</button>
+                <button
+                    onClick={() => router.push('/#about')}
+                    className='navBtn'
+                >
+                    About
+                </button>
+                <button
+                    onClick={() => router.push('/#experience')}
+                    className='navBtn'
+                >
+                    Experience
+                </button>
+                <button
+                    onClick={() => router.push('/#project')}
+                    className='navBtn'
+                >
+                    Projects
+                </button>
+                <button
+                    onClick={() => router.push('/#skills')}
+                    className='navBtn'
+                >
+                    Skills
+                </button>
             </div>
         </div>
     )
