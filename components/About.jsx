@@ -37,7 +37,7 @@ const About = () => {
                             <p>
                                 I am a first year Computer Science student at
                                 UCSC. I have been programming for 2 years now
-                                and I've held a few internship positions at
+                                and I have held a few internship positions at
                                 startups. Most of my work was related to web
                                 development and RESTful API design.
                             </p>
