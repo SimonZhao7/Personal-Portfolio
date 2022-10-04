@@ -6,7 +6,7 @@ import portrait from '../assets/portrait.jpg'
 
 const About = () => {
     return (
-        <div className='flex h-screen items-center justify-center p-5 xs:p-10 !pt-[82px] overflow-y-scroll'>
+        <section id='about' className='flex h-screen items-center justify-center p-5 xs:p-10 !pt-[82px] overflow-y-scroll'>
             <div className='h-full w-full rounded-lg'>
                 <div className='space-y-4'>
                     <motion.div
@@ -61,7 +61,7 @@ const About = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

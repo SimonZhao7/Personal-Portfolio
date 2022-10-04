@@ -17,7 +17,7 @@ const Main = () => {
     })
     const router = useRouter()
     return (
-        <div className='flex h-screen flex-col items-center justify-center space-y-10 pt-[72px]'>
+        <section id='main' className='flex h-screen flex-col items-center justify-center space-y-10 pt-[72px]'>
             <motion.div
                 initial={{ scale: 0, rotate: 45, opacity: 1 }}
                 animate={{ scale: 2, rotate: 45, opacity: [0.6, 0] }}
@@ -82,7 +82,7 @@ const Main = () => {
                     Skills
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 
