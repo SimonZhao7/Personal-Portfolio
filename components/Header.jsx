@@ -9,7 +9,7 @@ const Header = () => {
     const router = useRouter()
 
     return (
-        <header className='flex p-5 justify-between sticky top-0 z-20'>
+        <header className='z-90 sticky top-0 flex justify-between p-5'>
             <motion.div
                 initial={{
                     x: -500,
@@ -17,13 +17,13 @@ const Header = () => {
                 }}
                 animate={{
                     x: 0,
-                    opacity: [0, 0.1, 1],
+                    opacity: [0, 0.1, 0.2, 0.3, 1],
                 }}
                 transition={{
-                    duration: 1.5,
+                    duration: 1,
                 }}
                 viewport={{ once: true }}
-                className='flex space-x-4  items-center'
+                className='flex items-center  space-x-4'
             >
                 <FaLinkedin
                     className='socialIcon'
@@ -45,10 +45,10 @@ const Header = () => {
                 }}
                 animate={{
                     x: 0,
-                    opacity: [0, 0.1, 1],
+                    opacity: [0, 0.1, 0.2, 0.3, 1],
                 }}
                 transition={{
-                    duration: 1.5,
+                    duration: 1,
                 }}
                 viewport={{ once: true }}
             >

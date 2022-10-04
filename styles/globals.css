@@ -10,6 +10,10 @@
 
 @layer components {
   .socialIcon {
-    @apply w-8 h-8 2xl:w-10 2xl:h-10 text-green-900 hover:text-green-700 transition-colors duration-75 ease-in cursor-pointer;
+    @apply w-8 h-8 2xl:w-10 2xl:h-10 text-green-900 hover:text-green-700 hover:scale-110 transition duration-75 ease-in cursor-pointer;
+  }
+   
+  .navBtn {
+    @apply text-green-900 text-xs xs:text-sm xl:text-xl 2xl:text-2xl px-3 py-2 xs:px-4 xs:py-2 border-green-900 border rounded-md xs:rounded-lg uppercase tracking-wide hover:bg-green-900 hover:text-tea-green hover:scale-110 transition duration-150 ease-in;
   }
 }
