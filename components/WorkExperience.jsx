@@ -13,7 +13,7 @@ const WorkExperience = ({ image, company, position, details }) => {
                     viewport={{ once: true }}
                     className='w-24 xs:w-32'
                 >
-                    <Image src={image} className='rounded-full' />
+                    <Image src={image} className='rounded-full' alt={company + ' logo'} />
                 </motion.div>
             </div>
             <article className='space-y-2'>

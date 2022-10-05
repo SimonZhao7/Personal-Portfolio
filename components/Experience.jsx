@@ -13,6 +13,7 @@ const Experience = () => {
                     const { id, image, company, position, details } = e
                     return (
                         <WorkExperience
+                            key={id}
                             id={id}
                             image={image}
                             company={company}

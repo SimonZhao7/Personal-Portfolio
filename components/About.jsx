@@ -23,6 +23,7 @@ const About = () => {
                         layout='responsive'
                         objectFit='cover'
                         className='rounded-lg '
+                        alt='portrait'
                     />
                 </motion.div>
                 <motion.div

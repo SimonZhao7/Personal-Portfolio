@@ -15,7 +15,7 @@ export const experience = [
         ],
     },
     {
-        id: 1,
+        id: 2,
         image: livesotckcityLogo,
         company: 'LivestockCity',
         position: 'Fullstack Engineer Intern',
@@ -28,7 +28,7 @@ export const experience = [
         ],
     },
     {
-        id: 1,
+        id: 3,
         image: aimHighLogo,
         company: 'Aim High',
         position: 'Assistant Teacher',
