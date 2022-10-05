@@ -9,7 +9,7 @@ const Header = () => {
     const router = useRouter()
 
     return (
-        <header className='z-90 sticky top-0 flex w-full justify-between p-5'>
+        <header className='z-90 sticky top-0 flex w-full justify-between p-5 bg-tea-green'>
             <motion.div
                 initial={{
                     x: -500,

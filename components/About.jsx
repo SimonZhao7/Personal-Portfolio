@@ -8,9 +8,9 @@ const About = () => {
     return (
         <section
             id='about'
-            className='mx-auto mb-10 flex h-full items-center justify-center overflow-y-scroll p-5 !pt-[72px] xs:p-10'
+            className='mx-auto min-h-screen flex items-center justify-center overflow-y-scroll p-5 !pt-[72px] xs:p-10'
         >
-            <div className='h-full w-full max-w-6xl space-y-4 rounded-lg md:flex-row md:items-center md:space-x-8 xl:space-x-12 flex flex-col justify-center'>
+            <div className='w-full max-w-6xl space-y-4 rounded-lg md:flex-row md:items-center md:space-x-8 xl:space-x-12 flex flex-col justify-center'>
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}

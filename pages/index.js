@@ -15,8 +15,14 @@ export default function Home() {
             </Head>
             <Header />
             <Main />
+            <br />
+            <br />
             <About />
+            <br />
+            <br />
             <Experience />
+            <br />
+            <br />
         </main>
     )
 }
