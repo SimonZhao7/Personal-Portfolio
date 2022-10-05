@@ -8,7 +8,7 @@ import Experience from '../components/Experience'
 export default function Home() {
     return (
         <main
-            className={`z-99 absolute h-screen w-full overflow-x-hidden overflow-y-scroll`}
+            className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll`}
         >
             <Head>
                 <title>Simon&apos;s Portfolio</title>

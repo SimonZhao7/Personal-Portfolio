@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const WorkExperience = ({ image, company, position, details }) => {
     return (
-        <div className='snap-center ease min-w-full snap-always space-y-6 rounded-lg bg-[#A8B888] p-8 shadow-lg transition duration-100 hover:brightness-110 xs:p-10 md:min-w-[500px] xl:flex-1 xl:min-w-0'>
+        <div className='snap-center ease min-w-full snap-always space-y-6 rounded-lg bg-[#A8B888] p-8 shadow-lg transition duration-100 hover:brightness-110 xs:p-10 md:min-w-[500px] xl:flex-1 xl:min-w-0 '>
             <div className='flex w-full justify-center'>
                 <motion.div
                     initial={{ y: -50, opacity: 0 }}
