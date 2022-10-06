@@ -12,7 +12,7 @@ const Projects = () => {
             </h1>
             <div className='mx-auto flex overflow-x-scroll'>
                 {projects.map((p) => (
-                    <Project id={p.id} {...p} />
+                    <Project key={p.id} {...p} />
                 ))}
             </div>
         </section>
