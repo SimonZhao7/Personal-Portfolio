@@ -12,19 +12,9 @@ const Experience = () => {
                 Experience
             </h1>
             <div className='flex snap-x snap-mandatory space-x-4 overflow-x-scroll pl-5  pr-10 xs:space-x-6 xs:pl-10 xs:pr-16 xl:w-full xl:space-x-8 xl:pr-10'>
-                {experience.map((e) => {
-                    const { id, image, company, position, details } = e
-                    return (
-                        <WorkExperience
-                            key={id}
-                            id={id}
-                            image={image}
-                            company={company}
-                            position={position}
-                            details={details}
-                        />
-                    )
-                })}
+                {experience.map((e) => (
+                    <WorkExperience key={e.id} {...e} />
+                ))}
             </div>
         </section>
     )

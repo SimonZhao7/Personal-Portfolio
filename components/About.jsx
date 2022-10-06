@@ -2,7 +2,7 @@ import Image from 'next/image'
 // Framer Motion
 import { motion } from 'framer-motion'
 // Assets
-import portrait from '../assets/portrait.jpg'
+import portrait from '../public/assets/portrait.jpg'
 
 const About = () => {
     return (

@@ -1,6 +1,6 @@
-import ziplyneLogo from '../assets/ziplyne.png'
-import livesotckcityLogo from '../assets/livestockcity.png'
-import aimHighLogo from '../assets/aimhigh.jpeg'
+import ziplyneLogo from '../public/assets/ziplyne.png'
+import livesotckcityLogo from '../public/assets/livestockcity.png'
+import aimHighLogo from '../public/assets/aimhigh.jpeg'
 
 export const experience = [
     {

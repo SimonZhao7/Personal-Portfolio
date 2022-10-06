@@ -17,6 +17,7 @@ const WorkExperience = ({ image, company, position, details }) => {
                         src={image}
                         className='rounded-full'
                         alt={company + ' logo'}
+                        priority={true}
                     />
                 </motion.div>
             </div>
@@ -25,7 +26,7 @@ const WorkExperience = ({ image, company, position, details }) => {
                 <h3 className='text-sm italic xs:text-base md:text-lg 2xl:text-xl'>{company}</h3>
                 <ul className='list-disc space-y-2'>
                     {details?.map((d, i) => (
-                        <li className='w-full break-words text-sm 2xl:text-xl' key={i}>
+                        <li className='w-full text-sm 2xl:text-xl' key={i}>
                             {d}
                         </li>
                     ))}

@@ -70,7 +70,7 @@ const Main = () => {
                     Experience
                 </button>
                 <button
-                    onClick={() => router.push('/#project')}
+                    onClick={() => router.push('/#projects')}
                     className='navBtn'
                 >
                     Projects
