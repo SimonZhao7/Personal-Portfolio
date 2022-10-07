@@ -24,6 +24,7 @@ const Main = () => {
                 transition={{
                     duration: 0.75,
                     repeatDelay: 3,
+                    repeat: Infinity,
                 }}
                 className='absolute -z-10 h-60 w-60 border-2 border-green-900 2xl:h-80 2xl:w-80'
             ></motion.div>
@@ -43,6 +44,7 @@ const Main = () => {
                 transition={{
                     duration: 1.25,
                     repeatDelay: 2.5,
+                    repeat: Infinity,
                 }}
                 className='absolute z-0 h-20 w-20 border-2 border-green-900 2xl:h-40 2xl:w-40'
             ></motion.div>
