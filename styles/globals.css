@@ -16,4 +16,12 @@
   .navBtn {
     @apply text-green-900 text-xs xs:text-sm xl:text-xl 2xl:text-2xl px-3 py-2 xs:px-4 xs:py-2 border-green-900 border rounded-md xs:rounded-lg uppercase tracking-wide hover:bg-green-900 hover:text-tea-green hover:scale-110 transition duration-150 ease-in;
   }
+
+  .label {
+    @apply text-base text-black mb-[2px] tracking-widest;
+  }
+
+  .form-input {
+    @apply h-9 rounded-md outline-none px-3 mb-4 cursor-text border-2 border-gray-300 hover:border-gray-900 transition duration-150 ease-in;
+  }
 }
