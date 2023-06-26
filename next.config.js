@@ -12,6 +12,11 @@ const nextConfig = {
         destination: 'https://writers-notebook.vercel.app/',
         permanent: true,
       },
+      {
+        source: '/cs',
+        destination: 'https://docs.google.com/presentation/d/1VyDp7IQR_3HSluCD1XQ4riP1Yh_Wg_d4Jt2OEPTkj74/edit?usp=sharing',
+        permanent: true,
+      },
     ]
   },
 }
