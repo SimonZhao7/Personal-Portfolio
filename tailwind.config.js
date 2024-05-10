@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from 'tailwindcss/defaultTheme';
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [    
@@ -15,7 +15,16 @@ module.exports = {
     extend: {
       colors: {
         'tea-green': '#D5E2BC',
-        'underline': '#E08E45'
+        'underline': '#E08E45',
+        'light-gray': '#F6F4F9',
+        'jet': '#525252',
+        'dark-blue': '#4559C4',
+        'light-blue': '#DBE2F2',
+        'dark-purple': '#57229C',
+      },
+      fontFamily: {
+        source: ["var(--font-source-pro)"],
+        cabin: ["var(--font-cabin)"],
       }
     },
   },
