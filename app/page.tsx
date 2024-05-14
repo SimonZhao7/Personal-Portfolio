@@ -1,4 +1,3 @@
-import Head from "next/head";
 // Components
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -11,15 +10,16 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <main
-      className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll`}
+      className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll bg-light-gray`}
     >
-      <Head>
-        <title>Simon&apos;s Portfolio CAD</title>
-      </Head>
       <Header />
-      <Main />
-      <br />
-      <br />
+      <div className="w-full px-[175px]">
+        <Main />
+      </div>
+      <img
+        className="h-[500px] w-full rotate-180 text-dark-blue"
+        src={"/assets/wavesOpacity.svg"}
+      />
       <About />
       <br />
       <br />

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mx-auto flex min-h-screen items-center justify-center overflow-y-scroll p-5 !pt-[72px] xs:p-10"
+      className="mx-auto flex min-h-screen items-center justify-center overflow-y-scroll bg-light-blue p-5 !pt-[72px] xs:p-10"
     >
       <div className="flex w-full max-w-6xl flex-col justify-center space-y-4 rounded-lg md:flex-row md:items-center md:space-x-8 xl:space-x-12">
         <motion.div
