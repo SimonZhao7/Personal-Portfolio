@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply bg-tea-green;
+    @apply bg-light-blue;
   }
 }
 

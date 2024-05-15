@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <main
-      className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll bg-light-gray`}
+      className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll scroll-smooth bg-light-gray `}
     >
       <Header />
       <div className="w-full px-[175px]">
