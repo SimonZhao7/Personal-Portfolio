@@ -24,7 +24,7 @@ const About = () => {
       className="mx-auto flex min-h-screen justify-center gap-[100px] overflow-y-scroll bg-light-blue px-[175px] pt-[100px]"
     >
       <article className="flex-1 text-xl">
-        <h1 className="my-16 text-5xl font-bold text-dark-purple">About</h1>
+        <h1>About</h1>
         <p className="my-10">
           Passionate about solving complex problems to benefit society. I’m
           currently studying Computer Science at University of California, Santa

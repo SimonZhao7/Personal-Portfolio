@@ -10,6 +10,10 @@
   body {
     @apply bg-light-blue;
   }
+
+  h1 {
+    @apply my-16 text-5xl font-bold text-dark-purple;
+  }
 }
 
 @layer components {

@@ -1,21 +1,43 @@
+"use client";
+
 import WorkExperience from "../WorkExperience";
 // Constants
 import { experiences } from "../../constants/experience";
+// Framer Motion
+import { motion, Variants } from "framer-motion";
+
+const wrapperVariant: Variants = {
+  show: { transition: { staggerChildren: 0.5 } },
+};
 
 const Experience = () => {
   return (
     <section
       id="experience"
-      className="mx-auto flex min-h-screen flex-col justify-center pt-[72px] 2xl:max-w-[1536px]"
+      className="mx-auto flex min-h-screen flex-col justify-center px-[175px] pt-[72px]"
     >
-      <h1 className="mb-4 px-5 text-3xl uppercase tracking-widest text-green-900 underline decoration-underline xs:px-10 xl:text-4xl">
-        Experience
-      </h1>
-      <div className="flex snap-x snap-mandatory space-x-4 overflow-x-scroll pl-5  pr-10 xs:space-x-6 xs:pl-10 xs:pr-16 xl:w-full xl:space-x-8 xl:pr-10">
+      <h1>Experience</h1>
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={wrapperVariant}
+      >
         {experiences.map((e) => (
-          <WorkExperience key={e.id} experience={e} />
+          <div className="mb-3 flex gap-3">
+            <div className="flex flex-col items-center gap-3 pt-2">
+              <div className="h-4 w-4 rounded-full border-4 border-dark-blue">
+                &nbsp;
+              </div>
+              <div className="w-[2px] flex-1 bg-[#CCCCCC]"></div>
+            </div>
+            <WorkExperience key={e.id} experience={e} />
+          </div>
         ))}
-      </div>
+        <div className="h-4 w-4 rounded-full border-4 border-dark-blue">
+          &nbsp;
+        </div>
+      </motion.div>
     </section>
   );
 };

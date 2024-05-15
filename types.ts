@@ -15,6 +15,7 @@ export type Experience = {
   image: StaticImageData;
   company: string;
   position: string;
+  skills: string[];
   details: string[];
 };
 

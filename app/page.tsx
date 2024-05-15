@@ -13,14 +13,17 @@ export default function Home() {
       className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll scroll-smooth bg-light-gray `}
     >
       <Header />
-      <div className="w-full px-[175px]">
-        <Main />
-      </div>
+      <Main />
       <img
         className="h-[500px] w-full rotate-180 text-dark-blue"
         src={"/assets/wavesOpacity.svg"}
       />
       <About />
+      <img
+        className="h-[200px] w-full"
+        src={"/assets/tilt.svg"}
+        alt="tilt"
+      />
       <br />
       <br />
       <Experience />

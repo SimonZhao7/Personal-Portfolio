@@ -36,9 +36,9 @@ const Main = () => {
       initial="hidden"
       animate="show"
       id="main"
-      className="mt-[125px] font-semibold"
+      className="mt-[125px] w-full px-[175px] font-semibold"
     >
-      <motion.h1 className="text-6xl" variants={mainItem}>
+      <motion.h1 className="text-6xl text-black" variants={mainItem}>
         Hi, I'm <span className="text-dark-blue">Simon Zhao</span>
       </motion.h1>
       <motion.h3 className="my-10 text-3xl" variants={mainItem}>

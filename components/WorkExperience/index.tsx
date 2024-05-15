@@ -1,48 +1,40 @@
 "use client";
 
-import Image from "next/image";
 // Framer Motion
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 // Types
 import { WorkExperienceComponent } from "./types";
+import TextPill from "../TextPill";
+
+const itemVariant: Variants = {
+  hide: { x: 100, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const WorkExperience: WorkExperienceComponent = ({
-  experience: { image, company, position, details },
+  experience: { company, position, skills, details },
 }) => {
   return (
-    <div className="ease min-w-full snap-center snap-always space-y-6 rounded-lg bg-[#A8B888] p-8 shadow-lg transition duration-100 hover:brightness-110 xs:p-10 md:min-w-[500px] xl:min-w-0 xl:flex-1 ">
-      <div className="flex w-full justify-center">
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="md:w-38 w-24 xs:w-32"
-        >
-          <Image
-            src={image}
-            className="rounded-full"
-            alt={company + " logo"}
-            priority={true}
-          />
-        </motion.div>
+    <motion.article
+      variants={itemVariant}
+      className="w-full"
+    >
+      <h3 className="text-2xl font-bold">
+        {position}, {company}
+      </h3>
+      <div className="my-3 flex flex-wrap gap-3">
+        {skills.map((skill, i) => (
+          <TextPill text={skill} key={i} />
+        ))}
       </div>
-      <article className="space-y-2">
-        <h1 className="text-xl xs:text-2xl md:text-2xl 2xl:text-3xl">
-          {position}
-        </h1>
-        <h3 className="text-sm italic xs:text-base md:text-lg 2xl:text-xl">
-          {company}
-        </h3>
-        <ul className="list-disc space-y-2">
-          {details?.map((d, i) => (
-            <li className="w-full text-sm 2xl:text-xl" key={i}>
-              {d}
-            </li>
-          ))}
-        </ul>
-      </article>
-    </div>
+      <ul className="list-disc pl-4">
+        {details?.map((d, i) => (
+          <li className="w-full text-lg" key={i}>
+            {d}
+          </li>
+        ))}
+      </ul>
+    </motion.article>
   );
 };
 
