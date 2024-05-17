@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.card-shadow {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
 @layer base {
   body {
     @apply bg-light-blue;

@@ -5,12 +5,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative mx-auto flex min-h-full flex-col justify-center pt-[72px] sm:max-w-xl xl:max-w-none"
+      className="relative mx-auto flex min-h-full flex-col justify-center px-[175px] pt-[72px] sm:max-w-xl xl:max-w-none"
     >
-      <h1 className="px-10 text-3xl uppercase tracking-widest text-green-900 underline decoration-underline sm:text-center xl:text-4xl">
-        Projects
-      </h1>
-      <div className="mx-auto flex overflow-x-scroll">
+      <h1>Projects</h1>
+      <div className="grid grid-flow-row grid-cols-3 gap-10">
         {projects.map((p) => (
           <Project key={p.id} project={p} />
         ))}
