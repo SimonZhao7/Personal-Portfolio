@@ -1,5 +1,17 @@
+"use client";
+
 import Project from "../Project";
 import { projects } from "../../constants/projects";
+// Framer Motion
+import { Variants, motion } from "framer-motion";
+
+const container: Variants = {
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 const Projects = () => {
   return (
@@ -8,11 +20,17 @@ const Projects = () => {
       className="relative mx-auto flex min-h-full flex-col justify-center px-[175px] pt-[72px] sm:max-w-xl xl:max-w-none"
     >
       <h1>Projects</h1>
-      <div className="grid grid-flow-row grid-cols-3 gap-10">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-flow-row grid-cols-3 gap-10"
+      >
         {projects.map((p) => (
           <Project key={p.id} project={p} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -7,14 +7,28 @@ import { useState } from "react";
 import { ProjectComponent } from "./types";
 // React Icons
 import { FiExternalLink } from "react-icons/fi";
+// Components
+import TextPill from "../TextPill";
+// Framer Motion
+import { Variants, motion } from "framer-motion";
+
+const card: Variants = {
+  hidden: { y: -40, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", damping: 15 },
+  },
+};
 
 const Project: ProjectComponent = ({
-  project: { name, image, time, url, details, tech },
+  project: { name, image, url, details, tech },
 }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <div
+    <motion.div
+      variants={card}
       className="card-shadow relative h-[300px] overflow-hidden rounded-[10px]"
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
@@ -24,6 +38,13 @@ const Project: ProjectComponent = ({
         alt={`Image for project ${name}`}
         className="h-full w-full object-cover"
       />
+      <div
+        className={`absolute top-0 h-full w-full bg-black transition-opacity duration-300 ease-out ${
+          active ? "opacity-40" : "opacity-0"
+        }`}
+      >
+        &nbsp;
+      </div>
       <article className="shdaow-inner absolute bottom-0 w-full bg-white px-4 py-2">
         <div className="flex w-full items-center justify-between">
           <p className="text-xl font-bold">{name}</p>
@@ -36,13 +57,20 @@ const Project: ProjectComponent = ({
         </div>
         <div
           className={`${
-            active ? "h-[200px] pt-4" : "h-0"
-          } overflow-hidden transition-all duration-300 ease-out`}
+            active ? "h-[200px]" : "h-0"
+          } overflow-hidden transition-[height] duration-300 ease-out`}
         >
-          {details}
+          <div className="flex items-center gap-3">
+            <p className="m-5 flex-1 text-[16px]">{details}</p>
+          </div>
+          <div className="flex flex-wrap gap-x-2 gap-y-1">
+            {tech.map((t, i) => (
+              <TextPill text={t} key={i} />
+            ))}
+          </div>
         </div>
       </article>
-    </div>
+    </motion.div>
   );
 };
 

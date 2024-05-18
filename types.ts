@@ -5,9 +5,9 @@ export type Project = {
   name: string;
   image: StaticImageData;
   time: string;
-  tech: string;
+  tech: string[];
   url: string;
-  details: string[];
+  details: string;
 };
 
 export type Experience = {
