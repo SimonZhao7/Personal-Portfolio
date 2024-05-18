@@ -1,4 +1,7 @@
-import Image from "next/image";
+"use client";
+
+// Framer Motion
+import { motion } from "framer-motion";
 // Constants
 import { skills } from "../../constants/skills";
 
@@ -6,27 +9,26 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex min-h-screen flex-col justify-center pt-[72px]"
+      className="m-[85px] mt-[-400px] w-[calc(100%-85px*2)] rounded-xl bg-white p-[90px] pt-5 shadow-2xl"
     >
-      <h1 className="px-10 text-3xl uppercase tracking-widest text-green-900 underline decoration-underline sm:text-center xl:text-4xl">
-        Skills
-      </h1>
-      <div className="mx-auto grid w-full grid-cols-2 gap-4 p-10 xs:grid-cols-3 sm:max-w-2xl lg:grid-cols-4 2xl:max-w-3xl">
-        {skills.map((s) => (
-          <div
-            key={s.id}
-            className="group relative flex h-32 w-32 place-items-center items-center justify-center rounded-full border-[1px] border-green-900 transition duration-100 ease-in hover:bg-green-900/80 2xl:h-40 2xl:w-40"
-          >
-            <Image
-              src={s.icon}
-              alt={`Logo for ${s.name}`}
-              width={128}
-              height={128}
-              className="absolute -z-10 rounded-full transition duration-100 ease-in"
-            />
-            <p className="text-xl font-semibold text-white opacity-0 transition duration-100 ease-in group-hover:opacity-100 2xl:text-2xl">
-              {s.proficiency}
-            </p>
+      <h1>Skills</h1>
+      <div className="grid grid-flow-row grid-cols-2 gap-x-12 gap-y-8 font-source">
+        {skills.map(({ id, name, proficiency }) => (
+          <div key={id} className="flex items-center gap-5">
+            <p className="flex-1 text-lg font-semibold">{name}</p>
+            <div className="h-[10px] flex-[3] overflow-hidden rounded-full bg-[#D9D9D9]">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{
+                  width: `${proficiency * 100}%`,
+                  transition: { duration: 0.5, ease: "easeOut" },
+                }}
+                viewport={{ once: true }}
+                className="h-full rounded-full bg-dark-blue"
+              >
+                &nbsp;
+              </motion.div>
+            </div>
           </div>
         ))}
       </div>

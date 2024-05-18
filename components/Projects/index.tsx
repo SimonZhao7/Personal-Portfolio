@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative mx-auto flex min-h-full flex-col justify-center px-[175px] pt-[72px] sm:max-w-xl xl:max-w-none"
+      className="relative mx-auto flex min-h-full flex-col justify-center px-[175px] py-[72px] sm:max-w-xl xl:max-w-none"
     >
       <h1>Projects</h1>
       <motion.div

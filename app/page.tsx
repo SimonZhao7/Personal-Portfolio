@@ -19,11 +19,7 @@ export default function Home() {
         src={"/assets/wavesOpacity.svg"}
       />
       <About />
-      <img
-        className="h-[200px] w-full"
-        src={"/assets/tilt.svg"}
-        alt="tilt"
-      />
+      <img className="h-[200px] w-full" src={"/assets/tilt.svg"} alt="tilt" />
       <br />
       <br />
       <Experience />
@@ -32,6 +28,12 @@ export default function Home() {
       <Projects />
       <br />
       <br />
+      <img
+        className="h-[200px] w-full rotate-180"
+        src={"/assets/tilt.svg"}
+        alt="tilt flipped"
+      />
+      <div className="h-[500px] bg-light-blue"></div>
       <Skills />
       <br />
       <br />

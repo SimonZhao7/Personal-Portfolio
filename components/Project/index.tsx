@@ -17,7 +17,7 @@ const card: Variants = {
   show: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", damping: 15 },
+    transition: { type: "spring", damping: 15 }
   },
 };
 

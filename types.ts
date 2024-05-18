@@ -22,6 +22,6 @@ export type Experience = {
 export type Skill = {
   id: number;
   name: string;
-  proficiency: string;
+  proficiency: number;
   icon: string;
 };
