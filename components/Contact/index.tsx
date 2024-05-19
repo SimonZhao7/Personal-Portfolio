@@ -4,8 +4,6 @@ import { useState } from "react";
 // Firebase
 import { db } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
-// Icons
-import { CheckIcon } from "@heroicons/react/solid";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -14,34 +12,37 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
-    if (!success) {
-      e.preventDefault();
+    e.preventDefault();
 
-      await addDoc(collection(db, "messages"), {
-        name,
-        email,
-        message,
-      });
-      setSuccess(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
+    await addDoc(collection(db, "messages"), {
+      name,
+      email,
+      message,
+    });
+    setName("");
+    setEmail("");
+    setMessage("");
+    setSuccess(true);
   };
 
   return (
-    <section className="bg-gradient-to-b from-tea-green via-[#A8B888] to-[#A8B888] px-5 py-14 xs:p-14">
-      <h1 className="mb-5 text-center text-2xl uppercase tracking-widest text-green-900 underline decoration-underline xl:text-3xl">
-        Contact Me!
-      </h1>
-      <form
-        className="mx-auto flex max-w-sm flex-col xl:max-w-xl"
-        onSubmit={handleSubmit}
-      >
+    <section
+      id="contact"
+      className="mt-[200px] rounded-tl-[30px] rounded-tr-[30px] bg-dark-blue px-[175px] py-[72px]"
+    >
+      <form className="mx-auto w-1/2" onSubmit={handleSubmit}>
+        <h1 className="text-white">Contact Me</h1>
+
+        {success && (
+          <div className="mb-4 rounded-md border-2 border-green-700 bg-green-200 px-4 py-3">
+            <p className="text-lg">Your message has been sent!</p>
+          </div>
+        )}
+
         <label className="label">Name</label>
         <input
           className="form-input"
-          placeholder="E.g. John Doe"
+          placeholder="Enter a name..."
           required
           type="text"
           value={name}
@@ -52,7 +53,7 @@ const Contact = () => {
           className="form-input"
           required
           type="email"
-          placeholder="E.g. jdoe@gmail.com"
+          placeholder="Enter a valid email..."
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -62,17 +63,15 @@ const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
           required
           rows={8}
-          placeholder="Enter your message here..."
-          className="mb-5 rounded-md border-2 border-gray-300 p-3 outline-none transition duration-150 ease-in hover:border-gray-900"
+          placeholder="Hi, Simon..."
+          className="mb-5 w-full rounded-md border-2 border-jet px-4 py-3 placeholder-jet outline-none"
         ></textarea>
         <button
           type="submit"
-          disabled={success}
-          className={`w-full rounded-md border-2 border-green-900 py-2 ${
-            success && "cursor-not-allowed bg-green-900 text-[#A8B888]"
-          } flex items-center justify-center uppercase tracking-widest text-green-900 transition duration-100 ease-in hover:bg-green-900 hover:text-[#A8B888]`}
+          className={`flex w-full cursor-pointer items-center justify-center rounded-md 
+           border-2 border-[#4b2085] bg-dark-purple py-2 text-lg text-white transition duration-100 ease-in hover:bg-[#4b2085]`}
         >
-          {success ? <CheckIcon className="h-6 w-6" /> : "Send"}
+          Submit
         </button>
       </form>
     </section>

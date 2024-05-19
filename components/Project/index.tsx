@@ -61,7 +61,7 @@ const Project: ProjectComponent = ({
           } overflow-hidden transition-[height] duration-300 ease-out`}
         >
           <div className="flex items-center gap-3">
-            <p className="m-5 flex-1 text-[16px]">{details}</p>
+            <p className="m-5 flex-1 text-base">{details}</p>
           </div>
           <div className="flex flex-wrap gap-x-2 gap-y-1">
             {tech.map((t, i) => (
