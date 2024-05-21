@@ -19,9 +19,9 @@ const keywords = [
 const About = () => {
   return (
     <section
-      
       id="about"
-      className="mx-auto flex min-h-screen justify-center gap-[100px] overflow-y-scroll bg-light-blue px-[175px] pt-[100px]"
+      className="section-padding mx-auto min-h-screen justify-center gap-[100px]
+        overflow-y-scroll bg-light-blue pt-[100px] lg:flex"
     >
       <article className="flex-1 text-xl">
         <h1>About</h1>
@@ -40,7 +40,7 @@ const About = () => {
           positive impact on a large number of users
         </p>
       </article>
-      <figure className="h-min w-[375px] overflow-hidden rounded-lg">
+      <figure className="mx-auto h-min max-w-[375px] overflow-hidden rounded-lg lg:mx-0">
         <Image src={portrait} alt="Self portrait" className="w-full" />
         <div className="flex w-full flex-wrap gap-x-3 gap-y-2 bg-white p-4">
           {keywords.map((k, i) => (

@@ -9,12 +9,14 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="m-[85px] mt-[-400px] w-[calc(100%-85px*2)] rounded-xl bg-white p-[90px] pt-5 shadow-2xl"
+      className="mx-5 mt-[-400px] w-[calc(100%-20px*2)] rounded-xl bg-white p-8 pt-5 shadow-2xl
+        sm:mx-10 sm:w-[calc(100%-40px*2)] sm:p-12 lg:mx-[85px] lg:w-[calc(100%-85px*2)]
+        lg:px-[90px]"
     >
       <h1>Skills</h1>
-      <div className="grid grid-flow-row grid-cols-2 gap-x-12 gap-y-8 font-source">
+      <div className="grid grid-flow-row gap-x-12 gap-y-8 font-source md:grid-cols-2">
         {skills.map(({ id, name, proficiency }) => (
-          <div key={id} className="flex items-center gap-5">
+          <div key={id} className="items-center gap-5 lg:flex">
             <p className="flex-1 text-lg font-semibold">{name}</p>
             <div className="h-[10px] flex-[3] overflow-hidden rounded-full bg-[#D9D9D9]">
               <motion.div

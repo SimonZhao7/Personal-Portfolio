@@ -17,7 +17,7 @@ const card: Variants = {
   show: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", damping: 15 }
+    transition: { type: "spring", damping: 15 },
   },
 };
 
@@ -39,9 +39,8 @@ const Project: ProjectComponent = ({
         className="h-full w-full object-cover"
       />
       <div
-        className={`absolute top-0 h-full w-full bg-black transition-opacity duration-300 ease-out ${
-          active ? "opacity-40" : "opacity-0"
-        }`}
+        className={`absolute top-0 h-full w-full bg-black transition-opacity duration-300 ease-out
+        ${active ? "opacity-40" : "opacity-0"}`}
       >
         &nbsp;
       </div>
@@ -58,7 +57,8 @@ const Project: ProjectComponent = ({
         <div
           className={`${
             active ? "h-[200px]" : "h-0"
-          } overflow-hidden transition-[height] duration-300 ease-out`}
+          } overflow-hidden transition-[height]
+          duration-300 ease-out`}
         >
           <div className="flex items-center gap-3">
             <p className="m-5 flex-1 text-base">{details}</p>

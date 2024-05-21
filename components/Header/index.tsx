@@ -22,7 +22,8 @@ const Header = () => {
               onClick={() => setSelected(i)}
               className={`block border-b-[3px] ${
                 selected == i ? "border-dark-blue" : "transparent"
-              } py-3 hover:cursor-pointer`}
+              }
+              py-3 hover:cursor-pointer`}
             >
               {link}
             </Link>

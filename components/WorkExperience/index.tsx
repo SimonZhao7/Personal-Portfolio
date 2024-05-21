@@ -15,21 +15,18 @@ const WorkExperience: WorkExperienceComponent = ({
   experience: { company, position, skills, details },
 }) => {
   return (
-    <motion.article
-      variants={itemVariant}
-      className="w-full"
-    >
-      <h3 className="text-2xl font-bold">
+    <motion.article variants={itemVariant} className="w-full">
+      <h3 className="text-xl font-bold sm:text-2xl">
         {position}, {company}
       </h3>
-      <div className="my-3 flex flex-wrap gap-3">
+      <div className="my-4 flex flex-wrap gap-2 lg:gap-3">
         {skills.map((skill, i) => (
           <TextPill text={skill} key={i} />
         ))}
       </div>
       <ul className="list-disc pl-4">
         {details?.map((d, i) => (
-          <li className="w-full text-lg" key={i}>
+          <li className="w-full text-base sm:text-lg" key={i}>
             {d}
           </li>
         ))}

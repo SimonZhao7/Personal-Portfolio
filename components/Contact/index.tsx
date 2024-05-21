@@ -28,9 +28,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mt-[200px] rounded-tl-[30px] rounded-tr-[30px] bg-dark-blue px-[175px] py-[72px]"
+      className="mt-[200px] rounded-tl-[30px] rounded-tr-[30px] bg-dark-blue px-12 py-[72px]
+        sm:px-[100px] md:px-[175px]"
     >
-      <form className="mx-auto w-1/2" onSubmit={handleSubmit}>
+      <form
+        className="mx-auto w-full md:w-[450px] lg:w-[600px]"
+        onSubmit={handleSubmit}
+      >
         <h1 className="text-white">Contact Me</h1>
 
         {success && (
@@ -64,12 +68,14 @@ const Contact = () => {
           required
           rows={8}
           placeholder="Hi, Simon..."
-          className="mb-5 w-full rounded-md border-2 border-jet px-4 py-3 placeholder-jet outline-none"
+          className="mb-5 w-full rounded-md border-2 border-jet px-4 py-3 placeholder-jet
+            outline-none"
         ></textarea>
         <button
           type="submit"
-          className={`flex w-full cursor-pointer items-center justify-center rounded-md 
-           border-2 border-[#4b2085] bg-dark-purple py-2 text-lg text-white transition duration-100 ease-in hover:bg-[#4b2085]`}
+          className={`flex w-full cursor-pointer items-center justify-center rounded-md border-2
+            border-[#4b2085] bg-dark-purple py-2 text-lg text-white transition duration-100
+            ease-in hover:bg-[#4b2085]`}
         >
           Submit
         </button>

@@ -22,7 +22,7 @@
 
 @layer components {
   .socialIcon {
-    @apply w-8 h-8 2xl:w-10 2xl:h-10 text-green-900 hover:text-green-700 hover:scale-110 transition duration-75 ease-in cursor-pointer;
+    @apply h-auto w-[20px] sm:w-[30px];
   }
    
   .navBtn {
@@ -35,5 +35,9 @@
 
   .form-input {
     @apply h-[50px] w-full rounded-md outline-none py-3 px-4 mb-6 cursor-text border-2 border-jet placeholder-jet;
+  }
+
+  .section-padding {
+    @apply px-8 sm:px-16 md:px-[100px] xl:px-[175px];
   }
 }
