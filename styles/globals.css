@@ -22,7 +22,7 @@
 
 @layer components {
   .socialIcon {
-    @apply h-auto w-[20px] sm:w-[30px];
+    @apply h-auto w-[35px] sm:w-[35px];
   }
    
   .navBtn {

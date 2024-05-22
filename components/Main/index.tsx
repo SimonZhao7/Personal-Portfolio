@@ -39,13 +39,14 @@ const Main = () => {
       className="section-padding mt-[125px] w-full font-semibold"
     >
       <motion.h1
-        className="my-5 text-4xl text-black sm:my-10 sm:text-5xl lg:text-6xl"
+        className="my-5 text-5xl text-black sm:my-10 lg:text-6xl"
         variants={mainItem}
       >
-        Hi, I&apos;m <span className="text-dark-blue">Simon Zhao</span>
+        Hi, I&apos;m{" "}
+        <span className="block text-dark-blue sm:inline">Simon Zhao</span>
       </motion.h1>
       <motion.h3
-        className="my-5 sm:my-10 sm:text-2xl lg:text-3xl"
+        className="my-5 text-2xl sm:my-10 lg:text-3xl"
         variants={mainItem}
       >
         Software Engineer

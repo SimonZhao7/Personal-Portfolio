@@ -1,4 +1,3 @@
-import Image from "next/image";
 // Components
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -11,18 +10,18 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <main
-      className={`absolute h-screen w-full overflow-x-hidden overflow-y-scroll scroll-smooth
+      className={`h-screen w-full overflow-x-hidden overflow-y-scroll scroll-smooth
         bg-light-gray`}
     >
       <Header />
       <Main />
-      <Image
+      <img
         className="h-[500px] w-full rotate-180 object-cover text-dark-blue lg:object-fill"
         src={"/assets/wavesOpacity.svg"}
         alt="wave opacity svg"
       />
       <About />
-      <Image
+      <img
         className="h-[200px] w-full"
         src={"/assets/tilt.svg"}
         alt="tilt svg"
@@ -35,7 +34,7 @@ export default function Home() {
       <Projects />
       <br />
       <br />
-      <Image
+      <img
         className="h-[200px] w-full rotate-180"
         src={"/assets/tilt.svg"}
         alt="tilt flipped svg"
