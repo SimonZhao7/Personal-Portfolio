@@ -12,12 +12,6 @@ const links = ["About", "Experience", "Projects", "Skills", "Contact"];
 const sidebarStyle: Variants = {
   hidden: {
     x: "100vw",
-    transition: {
-      duration: 0.3,
-      when: "afterChildren",
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-    },
   },
   show: {
     x: 0,
@@ -25,14 +19,14 @@ const sidebarStyle: Variants = {
       duration: 0.3,
       ease: "easeOut",
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.05,
     },
   },
 };
 
 const sidebarLink: Variants = {
-  hidden: { y: 40, opacity: 0, transition: { duration: 0.2, ease: "easeOut" } },
-  show: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { y: 20, opacity: 0, transition: { duration: 0 } },
+  show: { y: 0, opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
 };
 
 const Header = () => {
@@ -43,19 +37,21 @@ const Header = () => {
     <>
       <header className="fixed top-0 z-50 w-full bg-light-blue">
         <nav className="flex w-full items-center justify-between px-8 sm:px-12 lg:px-20">
-          <h3 className="font-source text-2xl font-semibold">
+          <h3 className="font-source text-2xl font-semibold 2xl:text-3xl">
             {"<SimonZhao />"}
           </h3>
-          <div className="hidden items-center gap-5 text-xl font-semibold md:flex">
+          <div className="hidden items-center text-xl font-semibold md:flex 2xl:text-2xl">
             {links.map((link, i) => (
               <Link
                 key={link}
                 href={`/#${link.toLowerCase()}`}
                 onClick={() => setSelected(i)}
-                className={`block border-b-[3px] ${
-                  selected == i ? "border-dark-blue" : "transparent"
-                }
-                py-3 hover:cursor-pointer`}
+                className={`block border-b-[3px] 2xl:border-b-4 ${
+                  selected == i
+                    ? "border-dark-blue"
+                    : "border-light-blue hover:border-light-blue-hover"
+                } p-3 transition-colors
+                duration-150 ease-out hover:cursor-pointer hover:bg-light-blue-hover`}
               >
                 {link}
               </Link>
@@ -86,10 +82,17 @@ const Header = () => {
                 bg-light-blue text-xl shadow-2xl shadow-black"
             >
               {links.map((link, i) => (
-                <motion.div variants={sidebarLink} key={link}>
+                <motion.div
+                  variants={sidebarLink}
+                  key={link}
+                  className="font-semibold"
+                >
                   <Link
                     href={`/#${link.toLowerCase()}`}
-                    onClick={() => setSelected(i)}
+                    onClick={() => {
+                      setSelected(i);
+                      setShowModal(false);
+                    }}
                     className={"block px-5 py-3 hover:cursor-pointer"}
                   >
                     {link}

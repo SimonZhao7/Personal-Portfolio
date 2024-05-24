@@ -29,7 +29,7 @@ const Project: ProjectComponent = ({
   return (
     <motion.div
       variants={card}
-      className="card-shadow relative h-[300px] overflow-hidden rounded-[10px]"
+      className="card-shadow relative h-[300px] overflow-hidden rounded-[10px] 2xl:h-[350px]"
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
@@ -46,24 +46,24 @@ const Project: ProjectComponent = ({
       </div>
       <article className="shdaow-inner absolute bottom-0 w-full bg-white px-4 py-2">
         <div className="flex w-full items-center justify-between">
-          <p className="text-xl font-bold">{name}</p>
+          <p className="text-xl font-bold 2xl:text-2xl">{name}</p>
           <Link href={url}>
             <FiExternalLink
-              size={20}
-              className="cursor-pointer transition-transform duration-100 ease-out hover:scale-110"
+              className="h-5 w-5 cursor-pointer transition-transform duration-100 ease-out
+                hover:scale-110 2xl:h-6 2xl:w-6"
             />
           </Link>
         </div>
         <div
           className={`${
-            active ? "h-[200px]" : "h-0"
-          } overflow-hidden transition-[height]
-          duration-300 ease-out`}
+            active ? "h-[200px] 2xl:h-[250px]" : "h-0"
+          } overflow-hidden
+          transition-[height] duration-300 ease-out`}
         >
           <div className="flex items-center gap-3">
-            <p className="m-5 flex-1 text-base">{details}</p>
+            <p className="m-5 flex-1 text-base 2xl:text-xl">{details}</p>
           </div>
-          <div className="flex flex-wrap gap-x-2 gap-y-1">
+          <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 2xl:gap-x-4 2xl:gap-y-2">
             {tech.map((t, i) => (
               <TextPill text={t} key={i} />
             ))}

@@ -36,17 +36,17 @@ const Main = () => {
       initial="hidden"
       animate="show"
       id="main"
-      className="section-padding mt-[125px] w-full font-semibold"
+      className="section-padding mt-[125px] w-full font-semibold 2xl:mt-[200px]"
     >
       <motion.h1
-        className="my-5 text-5xl text-black sm:my-10 lg:text-6xl"
+        className="my-5 text-5xl text-black sm:my-10 lg:text-6xl 2xl:text-7xl"
         variants={mainItem}
       >
         Hi, I&apos;m{" "}
         <span className="block text-dark-blue sm:inline">Simon Zhao</span>
       </motion.h1>
       <motion.h3
-        className="my-5 text-2xl sm:my-10 lg:text-3xl"
+        className="my-5 text-2xl sm:my-10 lg:text-3xl 2xl:text-4xl"
         variants={mainItem}
       >
         Software Engineer

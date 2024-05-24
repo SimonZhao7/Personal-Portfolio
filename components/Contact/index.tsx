@@ -32,10 +32,10 @@ const Contact = () => {
         sm:px-[100px] md:px-[175px]"
     >
       <form
-        className="mx-auto w-full md:w-[450px] lg:w-[600px]"
+        className="mx-auto w-full md:w-[450px] lg:w-[600px] 2xl:w-[750px]"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-white">Contact Me</h1>
+        <h1 className="mt-0 text-white sm:mt-16">Contact Me</h1>
 
         {success && (
           <div className="mb-4 rounded-md border-2 border-green-700 bg-green-200 px-4 py-3">
@@ -69,13 +69,13 @@ const Contact = () => {
           rows={8}
           placeholder="Hi, Simon..."
           className="mb-5 w-full rounded-md border-2 border-jet px-4 py-3 placeholder-jet
-            outline-none"
+            outline-none 2xl:border-4 2xl:text-xl"
         ></textarea>
         <button
           type="submit"
           className={`flex w-full cursor-pointer items-center justify-center rounded-md border-2
             border-[#4b2085] bg-dark-purple py-2 text-lg text-white transition duration-100
-            ease-in hover:bg-[#4b2085]`}
+            ease-in hover:bg-[#4b2085] 2xl:border-4 2xl:text-xl`}
         >
           Submit
         </button>

@@ -16,7 +16,7 @@ const WorkExperience: WorkExperienceComponent = ({
 }) => {
   return (
     <motion.article variants={itemVariant} className="w-full">
-      <h3 className="text-xl font-bold sm:text-2xl">
+      <h3 className="text-xl font-bold sm:text-2xl 2xl:text-3xl">
         {position}, {company}
       </h3>
       <div className="my-4 flex flex-wrap gap-2 lg:gap-3">
@@ -26,7 +26,7 @@ const WorkExperience: WorkExperienceComponent = ({
       </div>
       <ul className="list-disc pl-4">
         {details?.map((d, i) => (
-          <li className="w-full text-base sm:text-lg" key={i}>
+          <li className="w-full text-base sm:text-lg 2xl:text-xl" key={i}>
             {d}
           </li>
         ))}

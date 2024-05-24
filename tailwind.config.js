@@ -20,6 +20,7 @@ module.exports = {
         'jet': '#525252',
         'dark-blue': '#4559C4',
         'light-blue': '#DBE2F2',
+        'light-blue-hover': '#CBD4E7',
         'dark-purple': '#57229C',
       },
       fontFamily: {

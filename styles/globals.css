@@ -16,13 +16,13 @@
   }
 
   h1 {
-    @apply my-16 text-5xl font-bold text-dark-purple;
+    @apply my-16 text-5xl font-bold text-dark-purple 2xl:text-6xl;
   }
 }
 
 @layer components {
   .socialIcon {
-    @apply h-auto w-[35px] sm:w-[35px];
+    @apply h-auto w-[35px] sm:w-[35px] 2xl:w-[45px] 2xl:h-[45px];
   }
    
   .navBtn {
@@ -30,11 +30,11 @@
   }
 
   .label {
-    @apply block w-full mb-2 text-xl text-white;
+    @apply block w-full mb-2 text-xl text-white 2xl:text-2xl;
   }
 
   .form-input {
-    @apply h-[50px] w-full rounded-md outline-none py-3 px-4 mb-6 cursor-text border-2 border-jet placeholder-jet;
+    @apply h-[50px] w-full rounded-md outline-none py-3 px-4 mb-6 cursor-text border-2 border-jet placeholder-jet 2xl:h-[60px] 2xl:text-xl 2xl:border-4;
   }
 
   .section-padding {
