@@ -28,8 +28,8 @@ const Projects = () => {
         viewport={{ once: true }}
         className="grid grid-flow-row grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        {projects.map((p) => (
-          <Project key={p.id} project={p} />
+        {projects.map((p, i) => (
+          <Project key={i} project={p} />
         ))}
       </motion.div>
     </section>

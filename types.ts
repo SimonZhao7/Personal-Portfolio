@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 
 export type Project = {
-  id: number;
   name: string;
   image: StaticImageData;
   time: string;
@@ -11,7 +10,6 @@ export type Project = {
 };
 
 export type Experience = {
-  id: number;
   image: StaticImageData;
   company: string;
   position: string;
@@ -20,7 +18,6 @@ export type Experience = {
 };
 
 export type Skill = {
-  id: number;
   name: string;
   proficiency: number;
   icon: string;

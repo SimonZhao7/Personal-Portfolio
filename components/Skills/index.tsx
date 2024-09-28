@@ -15,8 +15,8 @@ const Skills = () => {
     >
       <h1 className="mt-5 sm:my-16">Skills</h1>
       <div className="grid grid-flow-row gap-x-12 gap-y-8 font-source md:grid-cols-2">
-        {skills.map(({ id, name, proficiency }) => (
-          <div key={id} className="items-center gap-5 lg:flex">
+        {skills.map(({ name, proficiency }, i) => (
+          <div key={i} className="items-center gap-5 lg:flex">
             <p className="flex-1 text-lg font-semibold 2xl:text-xl">{name}</p>
             <div className="h-[10px] flex-[3] overflow-hidden rounded-full bg-[#D9D9D9] 2xl:h-3">
               <motion.div

@@ -1,24 +1,34 @@
 // Assets
 import ziplyneLogo from "../public/assets/ziplyne.png";
-import livesotckcityLogo from "../public/assets/livestockcity.png";
 import aimHighLogo from "../public/assets/aimhigh.jpeg";
+import superstarsLogo from "../public/assets/superstars.png";
+import livesotckcityLogo from "../public/assets/livestockcity.png";
 // Types
 import { Experience } from "../types";
 
 export const experiences: Experience[] = [
   {
-    id: 1,
+    image: superstarsLogo,
+    company: "Superstars",
+    position: "Software Engineer Intern",
+    skills: ["Angular.js", "Typescript", "HTML/CSS/JS"],
+    details: [
+      "Spearheaded redesign of authentication service, reducing technical debt and code overhead in 30+ components",
+      "Developed 50+ responsive components with Angular, allowing 1000+ users to access the web app",
+      "Strategized and collaborated with CEO and other engineers by following Agile development practices",
+    ],
+  },
+  {
     image: ziplyneLogo,
     company: "Ziplyne",
     position: "Front-end Engineer Intern",
     skills: ["React.js", "HTML/CSS/JS"],
     details: [
-      "Designed 35+ customizable webpage replicas of platforms like Coupa and Ivalua using ReactJS for product demos",
+      "Designed 35+ customizable webpage replicas of corporate platforms, using ReactJS for product demos",
       "Collaborated with product manager to adjust replicas for better usage in company’s demo pages",
     ],
   },
   {
-    id: 2,
     image: livesotckcityLogo,
     company: "LivestockCity",
     position: "Fullstack Engineer Intern",
@@ -38,7 +48,6 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
     image: aimHighLogo,
     company: "Aim High",
     position: "Assistant Teacher",

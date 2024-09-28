@@ -23,8 +23,8 @@ const Experience = () => {
         viewport={{ once: true }}
         variants={wrapperVariant}
       >
-        {experiences.map((e) => (
-          <div className="mb-3 flex gap-3" key={e.id}>
+        {experiences.map((e, i) => (
+          <div className="mb-3 flex gap-3" key={i}>
             <div className="flex flex-col items-center gap-3 pt-2">
               <div
                 className="h-3 w-3 rounded-full border-[3px] border-dark-blue md:h-4 md:w-4 md:border-4

@@ -1,16 +1,15 @@
 // Assets
-import cashbuddy from "../public/assets/cashbuddy.png";
-import studystream from "../public/assets/studystream.png";
-import maomorize from "../public/assets/maomorize.png";
 import selftour from "../public/assets/selftour.png";
-import smokescreen from "../public/assets/smokescreen.png";
+import maomorize from "../public/assets/maomorize.png";
+import cashbuddy from "../public/assets/cashbuddy.png";
 import handinneed from "../public/assets/handinneed.png";
+import studystream from "../public/assets/studystream.png";
+import smokescreen from "../public/assets/smokescreen.png";
 // Types
 import { Project } from "../types";
 
 export const projects: Project[] = [
   {
-    id: 1,
     name: "SelfTour",
     image: selftour,
     time: "Mar. 2024 - Mar. 2024",
@@ -28,7 +27,6 @@ export const projects: Project[] = [
       "User-created walking tours with location-triggered guided content.",
   },
   {
-    id: 2,
     name: "Maomorize",
     image: maomorize,
     time: "Jan. 2024 - Jan. 2024",
@@ -37,7 +35,6 @@ export const projects: Project[] = [
     details: "AI-powered Active Recall + Spaced Repitition Study App",
   },
   {
-    id: 3,
     name: "Smokescreen",
     image: smokescreen,
     time: "Nov. 2023 - Nov.2023",
@@ -46,7 +43,6 @@ export const projects: Project[] = [
     details: "Youtube content-blocking Chrome extension",
   },
   {
-    id: 4,
     name: "HandInNeed",
     image: handinneed,
     time: "Jan. 2023 - Mar. 2023",
@@ -55,7 +51,6 @@ export const projects: Project[] = [
     details: "Volunteer matching and organization platform",
   },
   {
-    id: 5,
     name: "Cashbuddy",
     image: cashbuddy,
     time: "Snow Hacks Hackathon, Feb. 2022",
@@ -64,7 +59,6 @@ export const projects: Project[] = [
     details: "Budget tracker with filtering & sorting records",
   },
   {
-    id: 6,
     name: "Study Stream",
     image: studystream,
     time: "Mar. 2022 - Sep. 2022",
